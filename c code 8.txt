@@ -1,0 +1,25 @@
+// Code written on January 8, 2021
+// by Abhyuday choumal
+//This program implements a boolean function in C
+
+#include <stdio.h>
+
+//The  main function
+int main(void)
+{
+//8 bits = 1 byte
+
+//unsigned char takes input as 1 byte
+
+unsigned char  A=0,B=0,C=0,D=1;//inputs in hex	
+unsigned char one = 0x01;//used for displaying the output in bit
+unsigned char g,kmap_g;//outputs
+
+g = ((A)|(~B))&(~D)&((~B)|(c))&((~C)|(B)); ;//Boolean function for g in POS form
+
+kmap_g = ((A)|(~B))&(~D)&((~B)|(c))&((~C)|(B)); ;//kmap function for g in POS form
+
+printf("%x\n",one&g);//Output g
+printf("%x\n",one&kmap_g);//Output kmap g
+return 0;
+}

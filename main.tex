@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{karnaugh-map}
+
+% ADD TITLE HERE
+\usepackage[utf8]{inputenc}
+
+\title{K-map for g}
+\author{abhtudaychoumal8 }
+\date{january 2021}
+
+\begin{document}
+
+
+% ADD TITLE HERE
+\title{K-map for  g}
+\author{abhyuday}
+\date{8 january}
+
+
+
+\maketitle
+
+\section{K Map}
+
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{2,3,4,5,6,8,9,10,11,12,13,14,15}
+    \minterms{0,1,7}
+
+    \implicantedge{3}{2}{11}{10}
+    \implicant{4}{13}
+    \implicant{2}{10}
+    \implicant{12}{10}
+    
+    % note: position for start of \draw is (0, Y) where Y is
+    % the Y size(number of cells high) in this case Y=2
+    \draw[color=black, ultra thin] (0, 4) --
+    node [pos=0.7, above right, anchor=south west] {$BA$} % YOU CAN CHANGE NAME OF VAR HERE, THE $X$ IS USED FOR ITALICS
+    node [pos=0.7, below left, anchor=north east] {$DC$} % SAME FOR THIS
+    ++(135:1);
+  
+      
+    \end{karnaugh-map}
+
+\section{The boolean equation for g is:}
+
+
+    g = ($\overline{D}$) (A+$\overline{B}$)($\overline{B}$+C)($\overline{C}$+B)   
+    
+
+\end{document}
